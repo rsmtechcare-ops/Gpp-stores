@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1B120D">
+<title>GPP Drip Stores | Holy Drip since 2024</title>
+<meta name="description" content="Street wear, smart wear, shoes and makeup in Zambia. See what is in stock and order on WhatsApp.">
+<link rel="icon" href="favicon.svg"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+ <div class="row">
+  <button class="ic" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+  <a class="brand" href="#/">GPP <b>drip</b> stores</a>
+  <button class="ic" id="sbtn" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg></button>
+  <button class="ic" id="ubtn" aria-label="Sign in"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c1-4 4-6 8-6s7 2 8 6"/></svg></button>
+  <button class="ic" id="bbtn" aria-label="Open bag"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cnt" id="bn"></span></button>
+ </div>
+ <div class="sbar"><input id="q" type="search" placeholder="Search tees, joggers, shoes, makeup" aria-label="Search all items"></div>
+</header>
+
+<div class="nb" id="notices" hidden></div>
+<nav class="nav" id="nav" aria-label="Main menu" inert>
+ <div class="hd"><a class="brand" href="#/">GPP <b>drip</b> stores</a><button class="ic" id="mx" aria-label="Close menu"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+ <div class="rail"></div>
+ <ul id="tabs"></ul>
+ <div class="ft"><a class="btn wa" id="navwa" target="_blank" rel="noopener">Chat on WhatsApp</a><button class="btn ghost" id="inst" hidden style="margin-top:10px">Install app</button><p class="mut">Holy drip since 2024</p></div>
+</nav>
+<div id="scrim"></div>
+
+<main id="main"></main>
+<nav class="bt" aria-label="Quick tabs"><a href="#/"><i>🏠</i><span>Home</span></a><a href="#/clothes"><i>🛍️</i><span>Shop</span></a><a href="#/labels"><i>🏷️</i><span>Labels</span></a><a href="#/saved"><i>♥</i><span>Saved</span></a><a href="#/account"><i>👤</i><span>Me</span></a></nav>
+<footer><div class="wrap"><b class="brand">GPP <b>drip</b> stores</b><p>Holy drip since 2024. Prices in Zambian kwacha (K).</p><p>WhatsApp and calls: <a href="tel:+260778799099">+260 778 799 099</a></p></div></footer>
+<a class="fab" id="fab" target="_blank" rel="noopener">WhatsApp us</a>
+
+<dialog id="qv"><div class="dlg"><button class="ic x" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+ <img id="qimg" class="qi" alt=""><div class="th" id="qth"></div>
+ <h3 id="qn"></h3><p class="mut" id="qd"></p><p class="mut" id="qc"></p><div class="st" id="qs"></div><div class="row2" id="qa"></div></div></dialog>
+
+<dialog id="sg"><form method="dialog" class="dlg" id="sgf"><button type="button" class="ic x" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+ <h3 id="sgt">Sign in</h3><p class="mut" id="sgp"></p>
+ <div id="fn"><label for="nm">Your name</label><input id="nm" autocomplete="name" placeholder="e.g. Manuel"></div>
+ <div id="fe"><label for="em">Email</label><input id="em" type="email" autocomplete="email"></div>
+ <div id="fp"><label for="pw">Password</label><input id="pw" type="password" autocomplete="current-password" minlength="6"></div>
+ <div id="fh"><label for="ph">WhatsApp number (optional)</label><input id="ph" inputmode="tel" placeholder="+260…"></div>
+ <button class="btn" type="submit" id="go">Sign in</button><button type="button" class="btn ghost" id="mode"></button><button type="button" class="btn ghost" id="forgot" hidden>Forgot password?</button><button type="button" class="btn ghost" id="demo">Use demo account (Manuel)</button><button type="button" class="btn ghost" id="out" hidden>Sign out</button></form></dialog>
+
+<dialog id="bg" class="side"><div class="dlg"><button class="ic x" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+ <h3>Your bag</h3><div id="bl"></div><div class="tot"><span>Total</span><span id="bt"></span></div><p class="mut" id="bnote"></p><button class="btn wa" id="send" disabled>Request quote on WhatsApp</button></div></dialog>
+<div class="toast" id="toast" hidden></div>
+<script src="js/config.js"></script>
+<script src="js/products.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="js/backend.js"></script>
+<script src="js/views.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
